@@ -64,3 +64,32 @@
 .margin-right {
   margin-right: 0.5rem;
 }
+
+.space-around {
+  justify-content: space-around;
+}
+
+.day-view {
+  height: 4rem;
+  width: 5rem;
+}
+
+table {
+  border: 2px black solid;
+  width: 600px;
+  height: 300px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th {
+  background: rgb(165, 165, 165);
+}
+
+tr:nth-child(even) {
+  background: rgb(235, 235, 235);
+}
