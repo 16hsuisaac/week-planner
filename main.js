@@ -12,8 +12,38 @@ function modalShow(event) {
 function submit(event) {
   event.preventDefault();
   $modal.setAttribute('class', 'row modal-div justify-center before');
+  // console.log($day.value, $time.value, $description.value);
+
 }
 
+var data = {
+  entries: [],
+  editing: null
+};
+
+var previousFormEntries = localStorage.getItem('dates-entries');
+
+if (previousFormEntries !== null) {
+  data = JSON.parse(previousFormEntries);
+}
+
+window.addEventListener('beforeunload', function (event) {
+  var entriesStringified = JSON.stringify(data);
+  localStorage.setItem('dates-entries', entriesStringified);
+});
+
+// var $day = document.querySelector('[name="Days of the Week"]');
+// var $time = document.querySelector('[name="Time"]');
+// var $description = document.querySelector('[name="Description"]');
+
+// var $form = document.querySelector('.submitButton');
+// $submitButton.addEventListener('submit', $day.value);
+
+// function submitForm(event) {
+//   console.log('day: ', $day);
+// }
+
+// submitForm('asdf');
 // var times = [];
 // var dates = ['mon', 'tues', 'wed', 'thurs', 'fri', 'sat', 'sun'];
 // var entries = {
