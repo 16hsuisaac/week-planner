@@ -36,10 +36,14 @@
   border: 4px solid black;
 }
 
-textarea {
+.modal-width {
   width: 80%;
 }
 
-.text {
+.border {
   border: 4px solid black;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
