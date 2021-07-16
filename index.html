@@ -16,14 +16,22 @@
         <button>Add Entry</button>
       </div>
     </div>
-    <div class="modal-before">
-      <h2>Add Entry</h2>
+
+    <!-- Modal -->
+
+    <div class="modal-before flex">
+      <div class="row">
+        <div class="column-full">
+          <h2>Add Entry</h2>
+        </div>
+      </div>
+
       <form>
-        <lable>
+        <div class="row">
           <div class="dropDown">
             <label>
               <select name="Days of the Week">
-                <option>Day</option>
+                <option disabled selected>Day</option>
                 <option value="mon">Monday</option>
                 <option value="tues">Tuesday</option>
                 <option value="wed">Wednesday</option>
@@ -35,7 +43,7 @@
             </label>
             <label>
               <select name="Time">
-                <option>Time</option>
+                <option disabled selected>Time</option>
                 <option value="0">0:00</option>
                 <option value="1">1:00</option>
                 <option value="2">2:00</option>
@@ -62,8 +70,22 @@
                 <option value="23">23:00</option>
               </select>
             </label>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="text">
+            <label>
+              <textarea placeholder="Description" cols="100" rows="5"></textarea>
+            </label>
           </div>
-        </lable>
+        </div>
+
+        <div class="row">
+          <div class="submit">
+            <button>Submit</button>
+          </div>
+       </div>
       </form>
     </div>
   </div>
