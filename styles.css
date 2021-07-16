@@ -1,0 +1,16 @@
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
