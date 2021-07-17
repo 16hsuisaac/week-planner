@@ -16,6 +16,7 @@ function submit(event) {
     time: $time.value,
     description: $description.value
   };
+
   data.days[$day.value].push(dataEntry);
   // console.log($day.value, $time.value, $description.value);
 
@@ -48,9 +49,15 @@ var $day = document.querySelector('[name="Days of the Week"]');
 var $time = document.querySelector('[name="Time"]');
 var $description = document.querySelector('[name="Description"]');
 
-// var $tableRow = document.querySelectorAll('tbody>tr');
-// var $tableDescription = document.querySelectorAll('tbody>tr>td');
+var $tableRow = document.querySelectorAll('tbody>tr');
 
+for (var i = 0; i < $tableRow.length; i++) {
+  var td = $tableRow[i].children;
+  // if ()
+
+  td[0].textContent = data.days.mon;
+
+}
 // for (var i = 0; i < $tableRow.length; i++) {
 //   var td = $tableRow[i].children;
 //   // if ()
