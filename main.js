@@ -33,20 +33,28 @@ var data = {
   }
 };
 
-var previousFormEntries = localStorage.getItem('dates-entries');
+var previousDataEntries = localStorage.getItem('dates-entries');
 
-if (previousFormEntries !== null) {
-  data = JSON.parse(previousFormEntries);
+if (previousDataEntries !== null) {
+  data = JSON.parse(previousDataEntries);
 }
 
 window.addEventListener('beforeunload', function (event) {
-  var entriesStringified = JSON.stringify(data);
-  localStorage.setItem('dates-entries', entriesStringified);
+  var dataJSON = JSON.stringify(data);
+  localStorage.setItem('dates-entries', dataJSON);
 });
 
 var $day = document.querySelector('[name="Days of the Week"]');
 var $time = document.querySelector('[name="Time"]');
 var $description = document.querySelector('[name="Description"]');
+
+// var $tableRow = document.querySelectorAll('tbody>tr');
+// var $tableDescription = document.querySelectorAll('tbody>tr>td');
+
+// for (var i = 0; i < $tableRow.length; i++) {
+//   var td = $tableRow[i].children;
+//   // if ()
+// }
 
 // var $form = document.querySelector('.submitButton');
 // $submitButton.addEventListener('submit', $day.value);
